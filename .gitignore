@@ -4,3 +4,4 @@
 */*.iml
 rocks/
 node*/
+.DS_Store
