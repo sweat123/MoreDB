@@ -5,3 +5,4 @@
 rocks/
 node*/
 .DS_Store
+*/.DS_STORE
