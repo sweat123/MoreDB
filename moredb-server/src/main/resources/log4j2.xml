@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration status="INFO" monitorInterval="300">
+    <properties>
+        <property name="log_deploy_path">logs/deploy</property>
+        <property name="log_test_path">logs/test</property>
+    </properties>
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n"/>
+        </Console>
+    </appenders>
+    <loggers>
+        <root level="all" includeLocation="true">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>

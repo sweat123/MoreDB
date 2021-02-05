@@ -1,0 +1,52 @@
+syntax = "proto3"; // proto3 必须加此注解
+
+option java_package = "com.laomei.raft.raft.rocksdb";
+option java_outer_classname = "MoreDBProto";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+
+enum Type {
+  READ = 0;
+  UPDATE = 1;
+  DELETE = 2;
+}
+
+message MoreDBRequest {
+  Type cmdType = 1;
+
+  repeated ReadRequest readRequest = 2;
+  repeated UpdateRequest updateRequest = 3;
+  repeated DeleteRequest deleteRequest = 4;
+}
+
+message UpdateRequest {
+    string key = 1;
+    bytes value = 2;
+}
+
+message ReadRequest {
+    string key = 1;
+}
+
+message DeleteRequest {
+    string key = 1;
+}
+
+message MoreDBResponse {
+    Type cmdType = 1;
+    string msg = 2;
+    repeated ReadResponse readResponse = 3;
+    UpdateResponse updateResponse = 4;
+    DeleteResponse deleteResponse = 5;
+}
+
+message ReadResponse {
+    string key = 1;
+    bytes value = 2;
+}
+
+message UpdateResponse {
+}
+
+message DeleteResponse {
+}

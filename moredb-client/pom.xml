@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>moredb</artifactId>
+        <groupId>com.laomei.db</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>moredb-client</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.laomei.db</groupId>
+            <artifactId>moredb-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ratis</groupId>
+            <artifactId>ratis-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ratis</groupId>
+            <artifactId>ratis-grpc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ratis</groupId>
+            <artifactId>ratis-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

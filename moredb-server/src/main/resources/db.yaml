@@ -1,0 +1,15 @@
+groupId: '8f313a97-616a-45b1-afe2-d57a096b7d55'
+node:
+  id: node1
+  hostname: localhost
+  port: 8080
+groupNodes:
+  - id: node1
+    hostname: localhost
+    port: 8081
+  - id: node2
+    hostname: localhost
+    port: 8082
+  - id: node3
+    hostname: localhost
+    port: 8083
